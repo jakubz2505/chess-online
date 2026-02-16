@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Šach</title>
+
+    <!-- Favicon (ak si ho vytvoríš) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Štýly -->
+    <link rel="stylesheet" href="css/chessboard-1.0.0.css">
+
+    <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #board {
+            width: 400px;
+            margin: 20px auto;
+            opacity: 0.3;
+            transition: 0.3s;
+        }
+
+        #playBtn {
+            padding: 12px 25px;
+            background: #00cc66;
+            border: none;
+            border-radius: 6px;
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #00ff00;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .dot.waiting {
+            background: yellow;
+        }
+
+        .dot.offline {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Online Šach</h1>
+
+    <button id="playBtn">Hrať online</button>
+
+    <div id="status">Pripojený k serveru</div>
+    <span id="statusDot" class="dot"></span>
+
+    <div id="board"></div>
+
+    <!-- Skripty -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/chess.min.js"></script>
+    <script src="js/chessboard-1.0.0.js"></script>
+
+    <!-- Tvoj klientsky kód -->
+    <script src="client.js?v=2"></script>
+
+</body>
+</html>
